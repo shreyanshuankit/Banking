@@ -1,0 +1,32 @@
+#loginpage
+
+from Debit import *
+from balance import *
+
+x = input("Enter user name\t")
+y = input("Enter your password\t")
+try:
+    f = open(x, 'r')
+    i = 0
+    z = f.readline()
+    password = z[9:]
+    if password == y+"\n":
+        print("\n\n\t\t\t\tYou are welcome")
+        choice = 1
+        while choice != 4:
+
+            choice = int(input("\nWhat you want to \n1.Withdraw\n2.Deposit\n3.Check Balance\n4.Exit"))
+            if choice == 1:
+                amtt = int(input("Please enter amount\t\t"))
+                debit(x, amtt)
+            elif choice == 2:
+                amtt  = int(input("Please enter amount\t\t"))
+                crefit(x, amtt)
+            elif choice == 3:
+                bal(x)
+    else:
+        print("Wrong password")
+        print(password)
+        print(y)
+except Exception:
+    print("Invalid user name or password")
