@@ -1,0 +1,17 @@
+#debit and credit page
+
+from balance import *
+
+
+def debit(x,amtt):
+    f = open(x, 'a')
+    deb = str("d: "+amtt)
+    f.write(deb)
+    f.write("\n")
+    bal(x)
+
+
+def crefit(x,amtt):
+    f = open(x, 'a')
+    f.write(str("c: "+amtt))
+    f.write("\n")
