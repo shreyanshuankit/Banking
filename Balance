@@ -1,0 +1,12 @@
+#balance page
+
+def bal(x):
+        f = open(x, 'r')
+        i = 0
+        a = []
+        for i in f:
+            if i != 0:
+                z = f.readline()
+
+
+        print("\nBalance is: ",sum(a))
